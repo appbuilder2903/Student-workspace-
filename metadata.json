@@ -1,0 +1,9 @@
+{
+  "name": "Hossain Azmal Quantum GPT - Student Edition",
+  "description": "An advanced, secure AI study assistant for students featuring Nela, multi-model support, and interactive learning tools.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera",
+    "geolocation"
+  ]
+}

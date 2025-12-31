@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hossain Azmal Quantum GPT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes rgb-border {
+        0% { border-color: #ff0000; box-shadow: 0 0 10px #ff0000, inset 0 0 5px #ff0000; }
+        20% { border-color: #ff00ff; box-shadow: 0 0 10px #ff00ff, inset 0 0 5px #ff00ff; }
+        40% { border-color: #0000ff; box-shadow: 0 0 10px #0000ff, inset 0 0 5px #0000ff; }
+        60% { border-color: #00ffff; box-shadow: 0 0 10px #00ffff, inset 0 0 5px #00ffff; }
+        80% { border-color: #00ff00; box-shadow: 0 0 10px #00ff00, inset 0 0 5px #00ff00; }
+        100% { border-color: #ff0000; box-shadow: 0 0 10px #ff0000, inset 0 0 5px #ff0000; }
+      }
+      
+      .rgb-border-animate {
+        animation: rgb-border 5s infinite linear;
+      }
+
+      @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+        50% { transform: translateY(-20px) rotate(10deg); opacity: 0.8; }
+        100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+      }
+
+      .float-symbol {
+        animation: float 8s ease-in-out infinite;
+        transition: all 0.3s ease;
+      }
+
+      /* New Interactive Hover Effect for Symbols */
+      .hover-pop:hover {
+        animation: none; /* Stop floating temporarily */
+        transform: scale(1.5) rotate(360deg);
+        opacity: 1 !important;
+        color: #00ffff;
+        text-shadow: 0 0 20px #00ffff;
+        cursor: crosshair;
+        z-index: 50;
+      }
+
+      @keyframes scan-line {
+        0% { top: 0%; opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { top: 100%; opacity: 0; }
+      }
+
+      .scanner-bar {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #00ffff;
+        box-shadow: 0 0 10px #00ffff;
+        animation: scan-line 2s linear infinite;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #444; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body class="bg-black text-white overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>
